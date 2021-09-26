@@ -222,7 +222,13 @@ color: white;
 
 
 /* Header responsivo */
+@media screen && (max-width: 768px) {
+    .containerHeader{
 
+       
+        flex-direction: column;
+            
+}
 /*  Formulario */
 
 /* Formulario Responsivo*/
