@@ -123,7 +123,8 @@ body{
     justify-items: center;
     height: 100vh;
     width: 100%;
-
+       
+    
 }
 
 .headerItem1{
@@ -137,8 +138,8 @@ body{
     height: 70vh;
     /* background: blue; */
     margin-left: 10%;
-
-
+    
+    
 }
 
 .headerItem1 .headerTitle{
@@ -222,6 +223,21 @@ color: white;
 
 
 /* Header responsivo */
+@media screen and (max-width: 500px){
+    .Principal{
+
+        flex-direction: column;                
+    
+}
+
+@media(max-width:500px){
+
+    .Principal .Item1{
+
+        order: 2;
+    }
+
+}
 
 /*  Formulario */
 
