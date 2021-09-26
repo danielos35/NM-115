@@ -123,6 +123,7 @@ body{
     justify-items: center;
     height: 100vh;
     width: 100%;
+    
 
 }
 
@@ -137,6 +138,7 @@ body{
     height: 70vh;
     /* background: blue; */
     margin-left: 10%;
+   
 
 
 }
@@ -225,16 +227,59 @@ color: white;
 @media screen and (max-width: 768px) {
     .containerHeader{
        
-    flex-direction: column;
+    flex-direction: column; 
+    }
+            
+}
+@media screen and (max-width: 768px){
+    .headerItem1{
+        /* background: violet; */
+        order: 2;
+        display: flex;
+        width: 64%;
+        height: 70vh;
+        margin-left: 0.4%;
+    
+    }
+}
+@media screen and (max-width: 768px){
+    .headerItem1 .headerTitle{
+    /* background-color:blueviolet ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
             
 }
 
-.headerItem1{
+@media screen and (max-width: 768px){
+    .headerItem1 .headerText{
+        text-align: center;
+        margin-left: auto;
+        margin-right:auto;
 
-    order: 2;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .containerHeader .headerbutton{
+        /* background-color: mediumpurple; */
+        margin-left: auto;
+        margin-right:auto;
+        
+    }
 
 }
-            
+
+@media screen and (max-width: 768px) {
+    .headerItem2{
+        /* background-color: aqua; */
+        width: 68%;
+        height: 70vh;
+        /* background: blue; */
+        margin: 20px;
+        transition: 1s;
+    }
 }
 /*  Formulario */
 
