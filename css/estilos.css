@@ -282,6 +282,65 @@ color: white;
         transition: 1s;
     }
 }
-/*  Formulario */
+/*  Formulario = Juan Felipe Grajales Toro*/
+body {
+    margin: 0;
+}
+
+.General {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background: #191919;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+@media(max-width: 1000px) {
+    .General{
+        flex-direction: column;
+    }
+}
+.containerTitulo {
+    display: flex;
+    height: 60%;
+    width:30%;
+    color: #000000;
+    background: white;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+}
+
+.containerImage {
+        display: flex;
+        position: absolute;
+        height: auto;
+        width:63%;
+        align-items: center;
+        padding-top: 5%;
+}
+        
+
+.containerFormulario{
+    display: flex;
+    position: relative;
+    height: 60%;
+    width: 50%;
+    background:#191919;
+    color: white;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: left;
+    padding: 0% 0% 0% 5%;
+    z-index: 100;
+
+    
+}
 
 /* Formulario Responsivo*/
