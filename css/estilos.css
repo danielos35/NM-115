@@ -233,7 +233,7 @@ color: white;
 }
 @media screen and (max-width: 768px){
     .headerItem1{
-        background: violet; 
+        background:#191919;; 
         order: 2;
         display: flex;
         width: 64%;
@@ -274,7 +274,7 @@ color: white;
 
 @media screen and (max-width: 768px) {
     .headerItem2{
-        background-color: aqua; 
+        background-color:#191919;; 
         width: 68%;
         height: 30vh;
         /* background: blue; */
