@@ -10,22 +10,61 @@ body{
     background-color: #191919;
 }
 
+/* Intro */
+
+.hidden{
+
+    background: #191919;
+    overflow: hidden;
+
+}
+
+.loading{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #191919;
+    z-index: 20;
+
+}
+
+.loading img{
+
+    width: 7%;
+    height: auto;
+}
+
+@media(max-width:1000px){
+
+    .loading img{
+
+        width: 15%;
+    }
+}
+
 /***********------index.html------**************/
 
 /******...NavBar...*********/
 nav{
-    background-color: #191919 ;
+    /* background-color: #191919 ; */
+    /* background: red; */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 8vmax;
+    z-index: 20;
 }
 .NM-NavBar{
     color: white;
     display: flex;
     align-items: center;
     background-color: #191919 ;
+    /* background: blue; */
     width: 90%;
     height: 6vmax;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -33,11 +72,19 @@ nav{
     border-bottom: 1px solid white;
 }
 .NM-div-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40%;
+    height: 100%;
     padding: 0% 0%;
+    /* background: rebeccapurple; */
 }
 .NM-div-Menu{
+   
+    /* background: yellow; */
     width: 60%;
+    height: 100%;
     display: flex;
     justify-content: right;
     padding: 0% 0%;
@@ -46,11 +93,11 @@ nav{
 }
 #btn-menu{
     display: none;
+    background: rebeccapurple;
 }
 nav label{
     display: none;
-    text-align: center;    
-    width: 10%;
+   
 }
 nav label:hover{
     cursor: pointer;
@@ -58,15 +105,21 @@ nav label:hover{
     filter: invert();
 }
 .NM-div-Menu ul{
+    /* background:green; */
+    height: 100%;
     display: flex;
     margin: 0;
     list-style: none;
-    padding: 0;
-    flex-direction: row; 
+    /* height: 90px; */
+    flex-direction: row;
+    /* background: gray;  */
 }
 .NM-div-Menu li:hover{
     background: #191919;
     filter: invert();
+    text-decoration: overline;
+    /*text-decoration: underline; */
+    
 }
 .NM-div-Menu li a{
     display: block;
@@ -89,11 +142,19 @@ nav label:hover{
 @media screen and (max-width:600px) {
     nav{
         height: 11vh;
+        /* background: red; */
     }
+
 
     nav label{
         display: block;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         z-index: 1;
+        /* background: blue; */
         
     }
     
@@ -101,6 +162,8 @@ nav label:hover{
         width: 80%;
         font-size: 4vw;
         height: 9vh;
+        width: 95%;
+        /* background: green; */
     }
 
     .NM-div-title{
@@ -113,10 +176,12 @@ nav label:hover{
         z-index: 2;
         right: 0;
 		top: 10vh;
-		background-color: rgba(25,25,25,0.8);
+        /* background: rebeccapurple; */
+		/* background-color: rgba(25,25,25,0.8); */
         flex-direction: column;
         align-items: center;
-        width: 34%;   
+        justify-content: center;
+        width: 50%;   
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
     }
@@ -125,7 +190,7 @@ nav label:hover{
         flex-direction: column;
         border-left: 1px solid rgba(45,45,45,1);
         margin: 0%;
-        
+        background-color: rgba(25,25,25,0.8);
     }
     .NM-div-Menu li{
         border-bottom: 1px solid rgba(45,45,45,1);
@@ -203,6 +268,7 @@ text-align: justify;
     margin: 2%;
     animation: ImagHeader 1.5s ease-in;
     overflow:hidden;
+    transition: 1.5s;
 }
 
 @keyframes ImagHeader{
@@ -219,7 +285,7 @@ text-align: justify;
 .headerItem2:hover{
     -webkit-transform:scale(1.07);
     transform:scale(1.07);
-    transition: 1s;
+    transition: 2s;
 }
 .headerItem2 img{
     display: flex;
@@ -312,7 +378,9 @@ a{
 .NM-Registro{
     display: flex;
     justify-content: center;
-    background-color: #191919;
+    /* background: red; */
+    /* background-color: #191919; */
+   
     width: 100%;
     padding: 4% 0%;
 }
@@ -325,10 +393,12 @@ a{
     position: relative;
     flex-direction: row;
     z-index: 10;
-
+    transition: 1.5s;
     justify-content: center;
 }
 .NM-Registrate{
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: white;
     width: 50%;
@@ -497,6 +567,7 @@ a{
 /***********-----Login.html-----**************/
 .NM-Login{
     display: flex;
+    align-items: center;
     justify-content: center;
     background-color: #191919;
     width: 100%;
