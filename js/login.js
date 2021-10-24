@@ -1,4 +1,5 @@
 import {registros} from "./registro.js";
+import {Insertar_Registro, Consultar_Correo, Consultar_Contrasena} from './db.js';
 console.log(registros)
 
 document.querySelector("#btn-submit-form-login").addEventListener('click', login);
@@ -8,6 +9,13 @@ function login(){
     let usuario=false;
     let captcha=false; 
     let contrasena=false;
+    if(Consultar_Correo(correoingresado)==correoingresado){
+        usuario=true;
+        if(Consultar_Contrasena(contrasenaingresada)==contrasenaingresada){
+            contrasena=true;
+        }
+    }
+    /*
     for(var x in registros){
         if(registros[x].correo==correoingresado){
             usuario=true;
@@ -15,7 +23,8 @@ function login(){
                 contrasena=true;
             }
         }
-    }
+    }*/
+
     if (validarCAPTCHA()){
         captcha=true;
     }

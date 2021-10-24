@@ -24,15 +24,32 @@ function Insertar_Registro(nombre,apellidos,telefono,correo,password){
         }});
     
 }
-
-function Consultar_Registro(){
-    conexion.query("SELECT * FROM Usuarios_Registrados WHERE nombre='Maik'", function(error,resultados){
+// Consultar Correo
+function Consultar_Correo(correo){
+    conexion.query("SELECT * FROM Usuarios_Registrados WHERE correo='"+correo+"'", function(error,resultados){
     if(error){
-        throw error;
+        return false;
+        //throw error;
     }else{
-        console.log(resultados);
+        console.log(correo);
+        resultados=correo
+        return resultados;
     }        
 });
 }
-export{Insertar_Registro, Consultar_Registro}
+//Consultar contraseña
+function Consultar_Contrasena(password){
+    conexion.query("SELECT * FROM Usuarios_Registrados WHERE contraseña='"+password+"'", function(error,resultados){
+    if(error){
+        return false;
+        //throw error;
+    }else{
+        console.log(correo);
+        resultados=password
+        return resultados;
+    }        
+});
+}
+
+export{Insertar_Registro, Consultar_Correo, Consultar_Contrasena}
 // conexion.end();
