@@ -752,3 +752,248 @@ a{
 }
 
 }
+
+/* Nosotros*/
+
+body {
+    margin:0;
+}
+.General {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background: #191919;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+@media(max-width: 1000px) {
+    .General{
+        flex-direction: column;
+    }
+}
+
+.hidden{
+    
+    background: #191919;
+    overflow: hidden;
+
+}
+
+.loading{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #191919;
+    z-index: 20;
+
+}
+
+.loading img{
+
+    width: 7%;
+    height: auto;
+}
+
+@media(max-width:1000px){
+
+    .loading img{
+
+        width: 15%;
+    }
+}
+
+nav{
+    /* background-color: #191919 ; */
+    /* background: red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vmax;
+    z-index: 20;
+}
+
+.NM-NavBar {
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: #191919 ;
+    /* background: blue; */
+    width: 90%;
+    height: 6vmax;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8vw;
+    border-bottom: 1px solid white;
+}
+.NM-div-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    padding: 0% 0%;
+    /* background: rebeccapurple; */
+}
+.NM-div-Menu{
+   
+    /* background: yellow; */
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 0% 0%;
+    align-items: center;
+    animation: NavMenu 0.5s ease-in;
+}
+#btn-menu{
+    display: none;
+    background: rebeccapurple;
+}
+nav label{
+    display: none;
+   
+}
+nav label:hover{
+    cursor: pointer;
+    background: #191919;
+    filter: invert();
+}
+.NM-div-Menu ul{
+    /* background:green; */
+    height: 100%;
+    display: flex;
+    margin: 0;
+    list-style: none;
+    /* height: 90px; */
+    flex-direction: row;
+    /* background: gray;  */
+}
+.NM-div-Menu li:hover{
+    background: #191919;
+    filter: invert();
+    text-decoration: overline;
+    /*text-decoration: underline; */
+    
+}
+.NM-div-Menu li a{
+    display: block;
+    padding: 0% 2vw;
+    color: white;
+    text-decoration: none;
+}
+@keyframes NavMenu{
+    from{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to{
+        opacity: 5;
+        transform: translateX(0%);
+    }
+}
+/*.NM-Grupo-Trabajo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    font-size: 1.3vw;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}*/
+
+
+
+.NM-Grupo-Trabajo{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        height: 40%;
+        width: 200%;
+        padding: 10% 10% 5% 1% ;
+        font-size: 1.3vw;
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        left:50%;
+        
+}
+.NM-Registro-imag {
+    max-width: 50%;
+    height: auto;
+    justify-content: center;
+    animation: ImagHeader 1.5s ease-in;
+    position: relative;
+    top: 30%;
+}
+.NM-Registro-imag:hover{
+    max-width: 53%;
+    transition: all 1s;
+}
+
+.integrante1 {
+    position: relative;
+    right: 20%;
+    bottom: 30%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: 200%;
+}
+.integrante2 {
+    position: relative;
+    right: 33%;
+    bottom: 15%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: 50%;
+}
+.integrante3 {
+    position: relative;
+    right: 46%;
+    bottom: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: 50%;
+}
+.integrante4 {
+    position: relative;
+    right: 58.5%;
+    bottom: -15%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: 50%;
+}
+.integrante5 {
+    position: relative;
+    right: 68%;
+    bottom: -30%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: 50%;
+}
