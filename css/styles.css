@@ -1014,37 +1014,13 @@ nav label:hover{
         transform: translateX(0%);
     }
 }
-/*.NM-Grupo-Trabajo{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    width: 50%;
-    font-size: 1.3vw;
-    line-height: 0;
-    display: flex;
-    align-items: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}*/
 
 
 
-.NM-Grupo-Trabajo{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        background-color: white;
-        height: 40%;
-        width: 200%;
-        padding: 10% 10% 5% 1% ;
-        font-size: 1.3vw;
-        line-height: 0;
-        display: flex;
-        align-items: center;
-        position: relative;
-        left:50%;
-        
-}
+/* <<<<<<<<NOSTROS>>>>>> */
+
+
+
 .NM-Registro-imag {
     max-width: 50%;
     height: auto;
@@ -1058,58 +1034,148 @@ nav label:hover{
     transition: all 1s;
 }
 
-.integrante1 {
-    position: relative;
-    right: 20%;
-    bottom: 30%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1vw;
-    color: white;
-    border: 2px solid white;
-    text-align: center;
-    width: 200%;
+
+.nosotrosContainer{
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    /* background: rebeccapurple; */
 }
-.integrante2 {
-    position: relative;
-    right: 33%;
-    bottom: 15%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1vw;
-    color: white;
-    border: 2px solid white;
-    text-align: center;
+
+.nosotrosContainer .NosotrosItems {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+    /* background: red; */
+}
+
+
+@media(max-width:1024px){
+
+    .nosotrosContainer .NosotrosItems{
+
+        flex-direction: column;
+    }
+}
+
+.NM-Grupo-Trabajo-integrantes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+    height:80%;
+    /* background:green; */
+
+}
+
+
+.integrante{
+    display: flex;
+    
+    width: 90%;
+    height: 15%;
+    background: white;
+    border-style: solid;
+    border-color: white;
+
+}
+
+.integrante .integranteFoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    background: white;
+}
+
+.integrante .integranteFoto img{
+
+    height: 90%;
+    width: auto;
+}
+.integrante .nombreIntegrante{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 50%;
-}
-.integrante3 {
-    position: relative;
-    right: 46%;
-    bottom: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1vw;
+    background: #191919;
     color: white;
-    border: 2px solid white;
-    text-align: center;
-    width: 50%;
+    /* background: rebeccapurple; */
 }
-.integrante4 {
-    position: relative;
-    right: 58.5%;
-    bottom: -15%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1vw;
-    color: white;
-    border: 2px solid white;
-    text-align: center;
-    width: 50%;
+
+.integrante .socialIntegrantes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    background: #191919;
 }
-.integrante5 {
-    position: relative;
-    right: 68%;
-    bottom: -30%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1vw;
-    color: white;
-    border: 2px solid white;
-    text-align: center;
-    width: 50%;
+
+.integrante .socialIntegrantes a{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 60%;
+    /* background: yellow; */
 }
+
+.integrante .socialIntegrantes a  img{
+
+    height: 90%;
+    width: auto;
+    transition: 0.3s;
+
+}
+
+.integrante .socialIntegrantes a  img:hover{
+
+    height: 100%;
+    transition: 0.3s;
+
+}
+
+
+
+.NM-Grupo-Trabajo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width:45%;
+    background: white;
+    transition: 0.5s;
+    
+    
+}
+
+.NM-Grupo-Trabajo:hover{
+
+    height: 90%;
+    transition: 0.5s;
+}
+
+.NM-Grupo-Trabajo div{
+
+    /*  background: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.NM-Grupo-Trabajo div img{
+
+    width: 40%;
+}
+
+
