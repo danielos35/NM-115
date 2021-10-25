@@ -235,10 +235,10 @@ nav label:hover{
         height: 11vh;
         /* background: red; */
     }
-
+    /*
     .NM-div-Menu {
         /* background: rebeccapurple; */
-    }
+    /*} */ 
 
     nav label{
         display: block;
@@ -1046,10 +1046,18 @@ nav label:hover{
 
     display: flex;
     align-items:center;
-    justify-content: center;
     height: 100vh;
     width: 100%;
+    flex-direction: column;
     /* background: rebeccapurple; */
+    margin-top: 9%;
+    line-height: 0%;
+}
+.NM-Conocenos{
+    color: white;
+    text-align: left;
+    justify-content: left;
+    font-size: 1.4vw;
 }
 
 .nosotrosContainer .NosotrosItems {
@@ -1059,10 +1067,14 @@ nav label:hover{
     width: 90%;
     height: 80%;
     /* background: red; */
+    flex-direction: row;
+    font-size: 1vw;
+    line-height: 0%;
+    top: 0%;
 }
 
 
-@media(max-width:1024px){
+@media(max-width:700px){
 
     .nosotrosContainer .NosotrosItems{
 
@@ -1078,7 +1090,6 @@ nav label:hover{
     width: 55%;
     height:80%;
     /* background:green; */
-
 }
 
 
@@ -1169,7 +1180,6 @@ nav label:hover{
     width:45%;
     background: white;
     transition: 0.5s;
-    
     
 }
 

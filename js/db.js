@@ -25,15 +25,17 @@ function Insertar_Registro(nombre,apellidos,telefono,correo,password){
     
 }
 // Consultar Correo
+var Correos
+var Passwords
 function Consultar_Correo(correo){
     conexion.query("SELECT * FROM Usuarios_Registrados WHERE correo='"+correo+"'", function(error,resultados){
     if(error){
-        return false;
-        //throw error;
+        //return false;
+        throw error;
     }else{
-        console.log(correo);
-        resultados=correo
-        return resultados;
+        //console.log(correo);
+        Correos=resultados
+        return Correos;
     }        
 });
 }
@@ -41,15 +43,25 @@ function Consultar_Correo(correo){
 function Consultar_Contrasena(password){
     conexion.query("SELECT * FROM Usuarios_Registrados WHERE contraseña='"+password+"'", function(error,resultados){
     if(error){
-        return false;
-        //throw error;
+        //return false;
+        throw error;
     }else{
-        console.log(correo);
-        resultados=password
-        return resultados;
+        //console.log(password);
+        Passwords=resultados
+        return Passwords;
     }        
 });
 }
-
-export{Insertar_Registro, Consultar_Correo, Consultar_Contrasena}
+var DB_Registros;
+function Consultar_Datos(){
+    conexion.query("SELECT * FROM Usuarios_Registrados", function(error,resultados){
+        if(error){
+            throw error;
+        }else{
+            DB_Registros=resultados
+        } 
+    });
+    return DB_Registros;
+};
+export{Insertar_Registro, Consultar_Correo, Consultar_Contrasena,Consultar_Datos}
 // conexion.end();

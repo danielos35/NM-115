@@ -1,20 +1,16 @@
 import {registros} from "./registro.js";
-import {Insertar_Registro, Consultar_Correo, Consultar_Contrasena} from './db.js';
 console.log(registros)
 
 document.querySelector("#btn-submit-form-login").addEventListener('click', login);
 function login(){
     const correoingresado= document.getElementById("correo").value;
     const contrasenaingresada= document.getElementById("password").value;
+    // Enviando datos para consultar 
+    window.location.href=`consulta/${correoingresado}/${contrasenaingresada}`;
+    window.location.href=`consulta/${correoingresado}/${contrasenaingresada}`;
     let usuario=false;
     let captcha=false; 
     let contrasena=false;
-    if(Consultar_Correo(correoingresado)==correoingresado){
-        usuario=true;
-        if(Consultar_Contrasena(contrasenaingresada)==contrasenaingresada){
-            contrasena=true;
-        }
-    }
     /*
     for(var x in registros){
         if(registros[x].correo==correoingresado){

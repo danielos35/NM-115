@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import {Insertar_Registro, Consultar_Correo, Consultar_Contrasena} from './js/db.js';
+import {Insertar_Registro, Consultar_Correo, Consultar_Contrasena,Consultar_Datos} from './js/db.js';
 
 const app=express();
 const dirname=path.resolve();
@@ -28,5 +28,26 @@ app.get('/agregar/:nombre/:apellidos/:telefono/:correo/:password', function(peti
         Insertar_Registro(nombre,apellidos,telefono,correo,password);
         console.log("Ingresando a URl agregar")
         //respuesta=console.log("Guardado en base de batos")
-        setTimeout(function(){respuesta.redirect('/registro.html')},50000);
+        setTimeout(function(){respuesta.redirect('/registro.html')},7000);
+});
+
+
+app.get("/", function(peticion,respuesta){
+    respuesta.sendFile(dirname+"/login.html");
+});
+
+app.get('/consulta/:correo/:password',function(peticion,respuesta){
+    let correo=peticion.params.correo;
+    let password=peticion.params.password;
+    let Registros=Consultar_Datos();
+    //let Correos=Consultar_Correo(correo);
+    //let Contrasenas=Consultar_Contrasena(password);
+    console.log(Registros);
+    //console.log(typeof(Registros));
+    //console.log(Registros.length);
+    //console.log(Object.values(Registros[0])[4])
+
+    //console.log(Contrasenas);
+
+    
 });
