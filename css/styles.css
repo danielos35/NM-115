@@ -1099,6 +1099,13 @@ nav label:hover{
 
     height: 90%;
     width: auto;
+    transition: 0.3s;;
+}
+.integrante .integranteFoto img:hover{
+
+    height: 100%;
+    transition: 0.3s;
+
 }
 .integrante .nombreIntegrante{
     display: flex;
