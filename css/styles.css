@@ -1210,11 +1210,12 @@ nav label:hover{
    
 
 .headerItem1Diseno {
-    margin-top: 30px;
-    margin-bottom: 25px; 
+    /* margin-top: 30px;
+    margin-bottom: 25px;  */
     display:flex;
     flex-direction: row;
-    align-items:center;    
+    align-items:center; 
+    justify-content: center;   
     width: 100%;
     height: 100%;
     /* background-color:blueviolet; */
@@ -1229,8 +1230,8 @@ nav label:hover{
     flex-direction: row;
     align-items:center;    
     width: 100%;
-    /* height: 100%;
-    background-color:blueviolet; */
+    height: 100%;
+    background-color:RED; 
     
 
 }
@@ -1245,12 +1246,13 @@ nav label:hover{
     height: 100%;
     font-weight: bold;
     color: white;
-     /* background-color: blue;  */
+     /*     background-color: blue;  */
+     text-align: center;
 }
 
 .headertextDiseno{
 
-    font-size:30px;
+    font-size:2vw;
     font-family: sans-serif;
     font-weight:normal
     
@@ -1258,19 +1260,25 @@ nav label:hover{
 }
 
 .img1Diseno{
-    width:415px;
+    width:45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     display:flex;
-    background-color: white;
-    padding: 3px; 
+    /* background-color: white; */
+    /* padding: 3px;  */
     position: relative;
-    left: 300px;
+    /* left: 300px; */
+    /* background: black; */
     
 }
 
 #img1{
-    border:3px solid black;
+    border-style: double;
+    /* border:3px solid black; */
     background-color: white;
-    width:415px;
+    width:70%;
     display:flex;
     object-fit: cover;
     
@@ -1304,7 +1312,42 @@ nav label:hover{
 
 /* <<<<<<<<DISEÑO RESPONSIVO>>>>>> */
 
-@media screen and (max-width: 768px) {
+
+@media(max-width:1024px){
+
+    .containerHeaderDiseno{
+
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+    .headerItem1Diseno{
+
+        flex-direction: column;
+        height: 90vh;
+        /* background: blue; */
+        justify-content: space-evenly;
+    }
+
+    .headerTitleDiseno{
+        width: 90%;
+        height: 40%;
+        /* background: red; */
+    }
+
+    .img1Diseno{
+        width: 90%;
+        /* background: yellow; */
+    }
+    .headerItem2Diseno{
+
+        flex-direction: column;
+    }
+
+}
+
+/* @media screen and (max-width: 768px) {
     .containerHeader{
        
     flex-direction: column; 
@@ -1317,4 +1360,4 @@ nav label:hover{
 
 
     }
-}
+} */
