@@ -1085,6 +1085,7 @@ nav label:hover{
     background: white;
     border-style: solid;
     border-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 
@@ -1101,6 +1102,13 @@ nav label:hover{
 
     height: 90%;
     width: auto;
+    transition: 0.3s;;
+}
+.integrante .integranteFoto img:hover{
+
+    height: 100%;
+    transition: 0.3s;
+
 }
 .integrante .nombreIntegrante{
     display: flex;
