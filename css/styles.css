@@ -1021,7 +1021,12 @@ nav label:hover{
 
 /* <<<<<<<<NOSTROS>>>>>> */
 
-
+.nombreIntegrante{
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    
+}
 
 .NM-Registro-imag {
     max-width: 50%;
