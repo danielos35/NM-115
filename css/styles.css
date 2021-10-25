@@ -448,6 +448,8 @@ a{
         font-size: 4vw;
     }
 }
+
+
 /************...Reseña del programa...************/
 .NM-Programa{
     width: 100%;
@@ -1179,3 +1181,132 @@ nav label:hover{
 }
 
 
+/* <<<<<<<<DISEÑO>>>>>> */
+
+.containerHeaderDiseno {
+    
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left:5%;
+    margin-right: 5%;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+         
+    /* background: greenyellow; */
+
+}
+   
+
+.headerItem1Diseno {
+    margin-top: 30px;
+    margin-bottom: 25px; 
+    display:flex;
+    flex-direction: row;
+    align-items:center;    
+    width: 100%;
+    height: 100%;
+    /* background-color:blueviolet; */
+    
+
+}
+
+.headerItem2Diseno {
+    margin-top: 25px;
+    margin-bottom: 10px; 
+    display:flex;
+    flex-direction: row;
+    align-items:center;    
+    width: 100%;
+    /* height: 100%;
+    background-color:blueviolet; */
+    
+
+}
+.headerTitleDiseno {
+
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:flex-start;
+    width: 45%;
+    height: 100%;
+    font-weight: bold;
+    color: white;
+     /* background-color: blue;  */
+}
+
+.headertextDiseno{
+
+    font-size:30px;
+    font-family: sans-serif;
+    font-weight:normal
+    
+
+}
+
+.img1Diseno{
+    width:415px;
+    display:flex;
+    background-color: white;
+    padding: 3px; 
+    position: relative;
+    left: 300px;
+    
+}
+
+#img1{
+    border:3px solid black;
+    background-color: white;
+    width:415px;
+    display:flex;
+    object-fit: cover;
+    
+}
+
+.img2Diseno{
+    display:flex;
+    background-color: white;
+    padding: 3px; 
+    position: relative;
+    left: 300px;
+    object-fit: cover;
+}
+
+#img2{
+    border:3px solid black;
+    background-color: white;
+}
+
+
+.img1Diseno:hover{
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    transition: 2s;
+}
+.img2Diseno:hover{
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    transition: 2s;
+}
+
+/* <<<<<<<<DISEÑO RESPONSIVO>>>>>> */
+
+@media screen and (max-width: 768px) {
+    .containerHeader{
+       
+    flex-direction: column; 
+    }
+}
+
+@media screen and (max-width: 768px){
+    .headerItem1Diseno{
+        flex-direction: column;
+
+
+    }
+}
