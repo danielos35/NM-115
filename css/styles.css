@@ -1025,7 +1025,6 @@ nav label:hover{
     display: flex;
     flex-direction: column;
     line-height: 0;
-    
 }
 
 .NM-Registro-imag {
@@ -1057,7 +1056,8 @@ nav label:hover{
     color: white;
     text-align: left;
     justify-content: left;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
+    line-height: 0;
 }
 
 .nosotrosContainer .NosotrosItems {
@@ -1065,7 +1065,7 @@ nav label:hover{
     align-items:center;
     justify-content: center;
     width: 90%;
-    height: 80%;
+    height: 100%;
     /* background: red; */
     flex-direction: row;
     font-size: 1vw;
