@@ -81,7 +81,7 @@ app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respues
         console.log("Bienvenido")
 
     }
-    setTimeout(function(){respuesta.redirect('/login.html')},1);
-  
+    setTimeout(function(){respuesta.redirect('/login.html')},5000);
+
     
 });
