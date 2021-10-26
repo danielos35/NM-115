@@ -753,7 +753,7 @@ a{
 .NM-div-button{
     display: flex;
     justify-content: center;
-    padding: 3% 0%;
+    padding: 2% 0%;
 }
 .NM-div-button>div{
     display:flex;
@@ -781,7 +781,7 @@ a{
     font-size: 1.5vw;
     background-color:#191919 ;
     color: white;
-    padding: 2% 4%;
+    padding: 5% 0%;
     border-color: white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border: none;
@@ -797,13 +797,13 @@ a{
     margin-top: 0.2vw;
     display: none;
 }
-/***********-----Registro Exitoso-----**************/
+/***********-----Login Exitoso-----**************/
 .NM-div-LoginExitoso{
-    display: none;
+    display: block;
     background-color: #191919;
     color: white;
     position: absolute;
-    width: 50%;
+    width: 80%;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
@@ -823,11 +823,11 @@ a{
 #LoginExitosoTitle>h2{
     margin-left: 2%;
 }
-#LoginExitoso>p{
-    text-align: left;
-    align-items: left;
+#LoginExitoso>h1{
+    text-align: center;
+    align-items: center;
     width: 100%;
-    margin: 1% 15%;
+    margin: 1% 0%;
 }
 #MostrarLogin{
     flex-direction: column;
@@ -837,7 +837,7 @@ a{
 
 
 
-/***********...registro RESPONSIVE...**************/
+/***********...Login RESPONSIVE...**************/
 @media screen and (max-width:600px) {
 .NM-div-Login{
     width: 70%;

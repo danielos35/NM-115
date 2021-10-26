@@ -1,3 +1,4 @@
+import { Console } from 'console';
 import express from 'express';
 import path from 'path';
 import {Insertar_Registro,Consultar_Datos} from './js/db.js';
@@ -36,8 +37,6 @@ app.get("/", function(peticion,respuesta){
     respuesta.sendFile(dirname+"/login.html");
 });
 
-app.set()
-
 app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respuesta){
     let correoingresado=peticion.params.correo;
     let contrasenaingresada=peticion.params.password;
@@ -45,11 +44,10 @@ app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respues
     let result=Consultar_Datos();
     const Registros = Object.values(JSON.parse(JSON.stringify(result)));
     console.log(Registros);
-
+    console.log(captcha);
     let flag_usuario=false;
     let flag_captcha=false; 
     let flag_contrasena=false;
-    let Validacion=false;
 
     Registros.forEach(function(usuario){
         if(usuario.Correo==correoingresado){
@@ -61,25 +59,29 @@ app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respues
         console.log(usuario.Correo)
     });
     
-    if (captcha=true){
+    if (captcha===true){
         flag_captcha=true;
     }
     if(flag_usuario==false){
         console.log("Usuario no registrado")
+        setTimeout(function(){respuesta.redirect('/loginNoRegistrado.html')},0);
     }
     if(flag_usuario==true && flag_contrasena==false){
         console.log("Contraseña incorrecta")
+        setTimeout(function(){respuesta.redirect('/loginErrorPassword.html')},0);
     }
     if(flag_usuario==true && flag_contrasena==true && flag_captcha==false){
         console.log("Error en el CAPTCHA")
+        setTimeout(function(){respuesta.redirect('/loginErrorCaptcha.html')},0);
     }
 
     if(flag_usuario==true && flag_contrasena==true && flag_captcha==true){
-         Validacion=true;
         console.log("Bienvenido")
+        console.log(flag_captcha)
+        setTimeout(function(){respuesta.redirect('/loginOK.html')},0);
 
     }
-    setTimeout(function(){respuesta.redirect('/login.html')},5000);
+    
 
     
 });
