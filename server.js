@@ -43,8 +43,6 @@ app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respues
     let contrasenaingresada=peticion.params.password;
     let captcha=peticion.params.validar_captcha;
     let result=Consultar_Datos();
-    //let Correos=Consultar_Correo(correo);
-    //let Contrasenas=Consultar_Contrasena(password);
     const Registros = Object.values(JSON.parse(JSON.stringify(result)));
     console.log(Registros);
 
