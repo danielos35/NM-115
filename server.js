@@ -43,8 +43,7 @@ app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respues
     let captcha=peticion.params.validar_captcha;
     let result=Consultar_Datos();
     const Registros = Object.values(JSON.parse(JSON.stringify(result)));
-    console.log(Registros);
-    console.log(captcha);
+    //console.log(Registros);
     let flag_usuario=false;
     let flag_captcha=false; 
     let flag_contrasena=false;
@@ -59,7 +58,7 @@ app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respues
         console.log(usuario.Correo)
     });
     
-    if (captcha===true){
+    if (captcha=='true'){
         flag_captcha=true;
     }
     if(flag_usuario==false){
@@ -74,14 +73,9 @@ app.get('/consulta/:correo/:password/:validar_captcha',function(peticion,respues
         console.log("Error en el CAPTCHA")
         setTimeout(function(){respuesta.redirect('/loginErrorCaptcha.html')},0);
     }
-
     if(flag_usuario==true && flag_contrasena==true && flag_captcha==true){
         console.log("Bienvenido")
         console.log(flag_captcha)
         setTimeout(function(){respuesta.redirect('/loginOK.html')},0);
-
     }
-    
-
-    
 });

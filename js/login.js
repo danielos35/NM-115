@@ -26,6 +26,7 @@ function login(){
         // Enviando datos para consultar 
         window.location.href=`consulta/${correoingresado}/${contrasenaingresada}/${validar_captcha}`;
         window.location.href=`consulta/${correoingresado}/${contrasenaingresada}/${validar_captcha}`;
+        window.location.href=`consulta/${correoingresado}/${contrasenaingresada}/${validar_captcha}`;
     }
     
 }
